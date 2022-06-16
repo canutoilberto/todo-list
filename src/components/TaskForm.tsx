@@ -1,9 +1,9 @@
 
-type Props = {
-    btnText: string
+interface IProps {
+    btnText: string;
 }
 
-const TaskForm = ( {btnText }: Props) => {
+const TaskForm:React.FC<IProps> = ( { btnText }: IProps) => {
   return (
     <form>
         <div>
@@ -12,7 +12,7 @@ const TaskForm = ( {btnText }: Props) => {
         </div>
         <div>
             <label htmlFor="difficulty">Dificuldade: </label>
-            <input type="text" name="difficulty" placeholder="dificuldade: " />
+            <input type="text" name="difficulty" placeholder="nível de dificuldade" />
         </div>
         <input type="submit" value={btnText} />
     </form>
